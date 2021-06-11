@@ -22,7 +22,7 @@
 					<div class="pt-4">
 						<h4 class="card-title pricing-card-title">
 							<fmt:setLocale value="es-AR"/>
-							<fmt:formatNumber value="${book.price}" type="currency" currencySymbol="$"/>
+							<fmt:formatNumber value="${book.price}" type="currency" maxFractionDigits = "3" currencySymbol="$"/>
 						</h4>
 					</div>
 					<div class="d-flex justify-content-evenly pt-4 pb-4">

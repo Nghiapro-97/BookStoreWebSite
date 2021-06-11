@@ -70,7 +70,7 @@
 													</div>
 													<div class="pt-4">
 														<h4 class="card-title pricing-card-title">
-															<fmt:formatNumber value="${book.price}" type="currency" />
+															<fmt:formatNumber value="${book.price}" type="currency" maxFractionDigits = "3" currencySymbol="$" />
 														</h4>
 													</div>
 												</div>

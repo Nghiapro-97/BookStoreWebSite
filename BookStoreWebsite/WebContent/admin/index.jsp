@@ -66,7 +66,7 @@
 							<th scope="row"><a href="view_order?id=${order.orderId}">${order.orderId}</a></th>
 							<td>${order.customer.fullname}</td>
 							<td>${order.bookCopies}</td>
-							<td><fmt:formatNumber value="${order.total}" type="currency" /></td>
+							<td><fmt:formatNumber value="${order.total}" type="currency" maxFractionDigits = "3" currencySymbol="$" /></td>
 							<td>${order.paymentMethod}</td>
 							<td>${order.status}</td>
 							<td>${order.orderDate}</td>

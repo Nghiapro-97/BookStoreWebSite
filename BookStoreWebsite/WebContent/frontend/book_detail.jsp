@@ -57,7 +57,7 @@
 
 								<div class="d-flex justify-content-evenly pb-3">
 									<h1 class="card-title pricing-card-title">
-										<fmt:formatNumber value="${book.price}" type="currency" />
+										<fmt:formatNumber value="${book.price}" type="currency" maxFractionDigits = "3" currencySymbol="$" />
 									</h1>
 
 									<button

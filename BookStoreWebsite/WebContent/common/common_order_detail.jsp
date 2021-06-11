@@ -62,7 +62,7 @@
 						<label for="name">Order by</label>
 					</div>
 					<div class="form-floating flex-fill ms-1">
-						<input type="text" name="subtotal" id="subtotal" class="form-control border-top-0 border-end-0 border-start-0" value="<fmt:formatNumber value="${order.subtotal}" type="currency" />" placeholder="subtotal" readonly="readonly" /> 
+						<input type="text" name="subtotal" id="subtotal" class="form-control border-top-0 border-end-0 border-start-0" value="<fmt:formatNumber value="${order.subtotal}" type="currency" maxFractionDigits = "3" currencySymbol="$" />" placeholder="subtotal" readonly="readonly" /> 
 						<label for="subtotal">SubTotal</label>
 					</div>
 				</div>
@@ -72,7 +72,7 @@
 						<label for="status">Status</label>
 					</div>
 					<div class="form-floating flex-fill ms-1">
-						<input type="text" name="ship" id="ship" class="form-control border-top-0 border-end-0 border-start-0" value="<fmt:formatNumber value="${order.shippingFee}" type="currency" />" placeholder="ship" readonly="readonly" /> 
+						<input type="text" name="ship" id="ship" class="form-control border-top-0 border-end-0 border-start-0" value="<fmt:formatNumber value="${order.shippingFee}" type="currency" maxFractionDigits = "3" currencySymbol="$" />" placeholder="ship" readonly="readonly" /> 
 						<label for="ship">Shipping</label>
 					</div>
 				</div>
@@ -82,7 +82,7 @@
 						<label for="date">Date</label>
 					</div>
 					<div class="form-floating flex-fill ms-1">
-						<input type="text" name="tax" id="tax" class="form-control border-top-0 border-end-0 border-start-0" value="<fmt:formatNumber value="${order.tax}" type="currency" />" placeholder="tax" readonly="readonly" /> 
+						<input type="text" name="tax" id="tax" class="form-control border-top-0 border-end-0 border-start-0" value="<fmt:formatNumber value="${order.tax}" type="currency" maxFractionDigits = "3" currencySymbol="$" />" placeholder="tax" readonly="readonly" /> 
 						<label for="tax">Tax</label>
 					</div>
 				</div>
@@ -92,7 +92,7 @@
 						<label for="payment">Payment</label>
 					</div>
 					<div class="form-floating flex-fill ms-1">
-						<input type="text" name="total" id="total" class="form-control border-top-0 border-end-0 border-start-0" value="<fmt:formatNumber value="${order.total}" type="currency" />" placeholder="total" readonly="readonly" /> 
+						<input type="text" name="total" id="total" class="form-control border-top-0 border-end-0 border-start-0" value="<fmt:formatNumber value="${order.total}" type="currency" maxFractionDigits = "3" currencySymbol="$" />" placeholder="total" readonly="readonly" /> 
 						<label for="total">Total</label>
 					</div>
 				</div>
@@ -126,14 +126,14 @@
 						        	<h5 class="card-title">${orderDetail.book.title}</h5>
 						        	<p class="card-text"><small class="text-muted">${orderDetail.book.author}</small></p>
 						        	<div>
-										<span class="text-muted"><fmt:formatNumber value="${orderDetail.book.price}" type="currency" /></span>
+										<span class="text-muted"><fmt:formatNumber value="${orderDetail.book.price}" type="currency" maxFractionDigits = "3" currencySymbol="$" /></span>
 										<span class="text-muted"> x ${orderDetail.quantity}</span>						        
 						        	</div>
 						      	</div>
 						    </div>
 						 </div>
 					</td>
-					<td><span class="text-muted"><fmt:formatNumber value="${orderDetail.subtotal}" type="currency" /></span></td>
+					<td><span class="text-muted"><fmt:formatNumber value="${orderDetail.subtotal}" type="currency" maxFractionDigits = "3" currencySymbol="$" /></span></td>
 				</tr>
 			</c:forEach>
 		</tbody>
@@ -141,7 +141,7 @@
 			<tr>
 				<td></td>
 				<td><span class="fw-bolder fs-5">Total(${order.bookCopies} item):</span></td>
-				<td><span class="fw-bolder fs-5"><fmt:formatNumber value="${order.subtotal}" type="currency" /></span></td>
+				<td><span class="fw-bolder fs-5"><fmt:formatNumber value="${order.subtotal}" type="currency" maxFractionDigits = "3" currencySymbol="$" /></span></td>
 			</tr>
 		</tfoot>
 	</table>

@@ -144,10 +144,10 @@
 										<th class="col">${status.index + 1}</th>
 										<td class="col">${orderDetail.book.title}</td>
 										<td class="col">${orderDetail.book.author}</td>
-										<td class="col"><input type="hidden" placeholder="price" name="price" value="${orderDetail.book.price}" /> <fmt:formatNumber value="${orderDetail.book.price}" type="currency" /></td>
+										<td class="col"><input type="hidden" placeholder="price" name="price" value="${orderDetail.book.price}" /> <fmt:formatNumber value="${orderDetail.book.price}" type="currency" maxFractionDigits = "3" currencySymbol="$" /></td>
 										<td class="col"><input type="hidden" placeholder="quantity" name="bookId" value="${orderDetail.book.bookId}" /> 
 										<input type="number" class="form-control" name="quantity${status.index + 1}" value="${orderDetail.quantity}" /></td>
-										<td class="col"><fmt:formatNumber value="${orderDetail.subtotal}" type="currency" /></td>
+										<td class="col"><fmt:formatNumber value="${orderDetail.subtotal}" type="currency" maxFractionDigits = "3" currencySymbol="$" /></td>
 										<td><a href="javascript:void(0);" class="deleteLink" id="${orderDetail.book.bookId}">Remove</a></td>
 									</tr>
 								</c:forEach>
@@ -159,7 +159,7 @@
 							<div class="d-flex align-items-center justify-content-between">
 								<div class="me-auto pe-2">Total amount:</div>
 								<div class="">
-									<fmt:formatNumber value="${order.subtotal}" type="currency" />
+									<fmt:formatNumber value="${order.subtotal}" type="currency" maxFractionDigits = "3" currencySymbol="$" />
 								</div>
 							</div>
 							<div class="d-flex justify-content-between align-items-center">
@@ -184,7 +184,7 @@
 								<strong>TOTAL:</strong>
 							</div>
 							<div class="">
-								<fmt:formatNumber value="${order.total}" type="currency" />
+								<fmt:formatNumber value="${order.total}" type="currency" maxFractionDigits = "3" currencySymbol="$" />
 							</div>
 						</div>
 					</div>

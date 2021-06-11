@@ -118,7 +118,7 @@
 													<h6 class="mb-1 text-truncate" style="max-width: 200px; font-size: .875rem; font-weight: 500; color: #373f50; line-height: 1.2;">${item.name}</h6>
 													<div>
 														<h6 class="pt-1" style="font-size: smaller; color: #3d8bfd;">
-															<fmt:formatNumber value="${item.price}" type="currency" />
+															<fmt:formatNumber value="${item.price}" type="currency" maxFractionDigits = "3" currencySymbol="$" />
 															x ${item.quantity}
 														</h6>
 													</div>
@@ -127,13 +127,13 @@
 										</li>
 									</c:forEach>
 									<li class="list-group-item d-flex justify-content-between align-items-center p-3"><span>SubTotal:</span> <span class=""> <fmt:formatNumber
-												value="${transaction.amount.details.subtotal}" type="currency" /></span></li>
+												value="${transaction.amount.details.subtotal}" type="currency" maxFractionDigits = "3" currencySymbol="$" /></span></li>
 									<li class="list-group-item d-flex justify-content-between align-items-center p-3"><span>Tax:</span> <span class=""> <fmt:formatNumber value="${transaction.amount.details.tax}"
-												type="currency" /></span></li>
+												type="currency" maxFractionDigits = "3" currencySymbol="$" /></span></li>
 									<li class="list-group-item d-flex justify-content-between align-items-center p-3"><span>Delivery:</span> <span class=""><fmt:formatNumber
-												value="${transaction.amount.details.shipping}" type="currency" /></span></li>
+												value="${transaction.amount.details.shipping}" type="currency" maxFractionDigits = "3" currencySymbol="$" /></span></li>
 									<li class="list-group-item d-flex justify-content-between align-items-center p-3"><span class="fw-bolder">Total</span> <span class="fw-bolder"><fmt:formatNumber
-												value="${transaction.amount.total}" type="currency" /></span></li>
+												value="${transaction.amount.total}" type="currency" maxFractionDigits = "3" currencySymbol="$" /></span></li>
 								</ul>
 								<form action="execute_payment" method="post">
 									<div class="d-grid gap-2 my-3 px-3">

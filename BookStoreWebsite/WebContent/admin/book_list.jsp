@@ -79,7 +79,7 @@
 								</td>
 								<td><span>${book.author}</span></td>
 								<td><span>${book.category.name}</span></td>
-								<td><span><fmt:formatNumber value="${book.price}" type="currency" /></span></td>
+								<td><span><fmt:formatNumber value="${book.price}" type="currency" maxFractionDigits = "3" currencySymbol="$" /></span></td>
 								<td><span><fmt:formatDate pattern="MM/dd/yyyy" value='${book.lastUpdateTime}' /></span></td>
 								<td>
 								<a href="edit_book?id=${book.bookId}" class="edit-btn me-2">Edit</a> 
