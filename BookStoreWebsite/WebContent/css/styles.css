@@ -1,0 +1,158 @@
+body{
+    font-family: "Montserrat";
+    text-align: center;
+    width: 100%;
+}
+
+.py{
+  	padding: 15% 0 !important;
+}
+
+.my{
+	margin: 5% 0 !important;	
+}
+
+.border-bottoms{
+    border-bottom: 1px solid rgb(99, 98, 98);
+}
+
+/* container */
+.container-fluid{
+    padding: 0 10%;
+    height: auto;
+    background-color: #0E0B2B;
+    border-bottom-right-radius: 20% 100px;  
+}
+
+.bg-blue{
+    background-color: #0E0B2B;
+}
+
+.container2{
+    background-color: #ffffff;
+    border-top-left-radius: 20% 100px;
+    border-bottom-right-radius: 20% 100px;
+    padding: 0 10%;
+}
+/* hearder */
+.word{
+    color: green;
+    font-family: 'Permanent Marker', cursive;
+    font-size: larger;
+}
+
+header .form-seach{
+    padding: 0 5%;
+}
+
+header a:hover, header a span:hover{
+    color: green !important;
+}
+
+.big-hearder{
+    font-family: "Montserrat-Black";
+    font-size: 5em;  
+    line-height: 1.5;
+}
+
+.container-fluid .row form{
+    padding-top: 10%;
+}
+
+.title-image{
+    width: 100%;
+    height: 90%;
+    padding-top: 5%;
+}
+
+@media (min-width: 375px) {
+
+
+    .container-fluid .row{
+        padding-top: 10%;
+    }
+
+    .container-fluid .row form{
+        padding: 10% 0;
+    }
+
+}
+
+.btn-toggler{
+    border: none;
+}
+
+.btn-toggler:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid gray;
+}
+/* btn cart animation*/
+.cart:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+.cart:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+  
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+}
+
+/*---- section2 ----*/
+.tab button{
+	border: none;
+}
+
+.tab button.active {
+  color: #3d77f3;
+  border-bottom: 1px solid  #3d77f3;
+}
+
+.card1:hover{
+	box-shadow: none !important;
+}
+
+/* ---book detail ---*/
+.book-description{
+  width: 100%;
+}
+.book-description .descript{
+	width: 100%;
+	height: 125px;
+	text-align: justify;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: normal;
+}
+.book-description.showContent .descript{
+ 	height: auto;
+}
+
+footer {
+    background-color: #0E0B2B;
+    width: 100%;   
+    height: auto;
+    border-top-left-radius: 20% 100px;
+	padding: 5% 0; 
+}

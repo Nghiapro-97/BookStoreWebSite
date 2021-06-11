@@ -1,0 +1,10 @@
+body{background-color: #F8F9FA;}
+.pt-6{padding-top: 100px !important;}
+.angle{
+    background: green;
+    clip-path: polygon(0% 100%,40% 0%,15% 0%, 0% 40%);
+}
+.angle1{
+    background: rgb(49, 46, 46);
+    clip-path: polygon(0% 100%,30% 0%,100% 100%, 0% 30%);
+}
