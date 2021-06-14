@@ -61,7 +61,7 @@
 															<div class="fs-sm">
 																<span class="text-muted me-2">By:</span>${item.key.author}</div>
 															<div class="fs-lg text-accent pt-4">
-																<fmt:formatNumber value="${item.key.price}" type="currency" />
+																<fmt:formatNumber value="${item.key.price}" type="currency" maxFractionDigits = "2" currencySymbol="$" />
 															</div>
 														</div>
 													</div>
@@ -87,13 +87,13 @@
 									<ul class="list-group list-group-flush">
 										<li class="list-group-item d-flex justify-content-between align-items-center p-3">
 											<h6>SubTotal(${cart.totalQuantity} items):</h6> 
-											<h6 class=""><fmt:formatNumber value="${cart.totalAmount}" type="currency" /></h6></li>
+											<h6 class=""><fmt:formatNumber value="${cart.totalAmount}" type="currency" maxFractionDigits = "2" currencySymbol="$" /></h6></li>
 										<li class="list-group-item d-flex justify-content-between align-items-center p-3">
 											<h6>Tax</h6> 
-											<h6 class=""><fmt:formatNumber value="${cart.tax}" type="currency" /></h6></li>
+											<h6 class=""><fmt:formatNumber value="${cart.tax}" type="currency" maxFractionDigits = "2" currencySymbol="$" /></h6></li>
 										<li class="list-group-item d-flex justify-content-between align-items-center p-3">
 											<h6 class="fw-bolder">Total</h6> 
-											<h6 class="fw-bolder"><fmt:formatNumber value="${cart.total}" type="currency" /></h6>
+											<h6 class="fw-bolder"><fmt:formatNumber value="${cart.total}" type="currency" maxFractionDigits = "2" currencySymbol="$" /></h6>
 										</li>
 										<li class="list-group-item d-flex justify-content-between align-items-center p-3">
 											<span>Shipping cost calculated at Checkout</span>

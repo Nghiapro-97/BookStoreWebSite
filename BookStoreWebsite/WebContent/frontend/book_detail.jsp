@@ -33,31 +33,27 @@
 		<div class="bg-blue">
 			<div class="container2 py-5">
 				<div class="card mt-5 pt-3">
-					<div class="row g-0 border-bottoms mb-5 pb-5">
-						<div class="col-md-4">
+					<div class="row row-cols-1 row-cols-md-2 g-0 mb-5 pb-5">
+						<div class="col-12 col-lg-4">
 							<img class="img1" alt="imageBook" src="data:image/jpg;base64,${book.base64Image}" class="img-fluid" style="max-width: 323px;" />
 						</div>
-						<div class="col-md-8">
-							<div class="card-body">
+						<div class="col-lg-8">
+							<div class="card-body text-start">
 								<h3 class="card-title">${book.title}</h3>
 								<span class="card-text">
 									<small class="text-muted">by ${book.author} (author)</small>
 								</span>
 
-								<div class="d-flex justify-content-evenly pt-4 pb-4">
-									<div>
-										<span class="book-ratting"> 
+								<div class="py-3">
+										<span class="book-ratting me-3"> 
 											<jsp:directive.include file="book_rating.jsp" />
 										</span>
-									</div>
-									<div>
-										<a href="#review">${fn:length(book.reviews)} ratings</a>
-									</div>
+										<span><a href="#review">${fn:length(book.reviews)} ratings</a></span>
 								</div>
 
-								<div class="d-flex justify-content-evenly pb-3">
+								<div class="d-flex justify-content-between pb-3">
 									<h1 class="card-title pricing-card-title">
-										<fmt:formatNumber value="${book.price}" type="currency" maxFractionDigits = "3" currencySymbol="$" />
+										<fmt:formatNumber value="${book.price}" type="currency" maxFractionDigits = "2" currencySymbol="$" />
 									</h1>
 
 									<button
@@ -251,11 +247,6 @@
 		});
 		/*---end read more and less---*/
 
-		function topFunction() {
-			document.body.scrollTop = 0; // For Safari
-			document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-		};
-
 		$(document).ready(function() {
 			$("#btn_addToCart").click(function() {
 				window.location = 'add_to_cart?book_id=' + ${book.bookId};
@@ -271,8 +262,5 @@
 		});
 	</script>
 	<script src="js/rating.js"></script>
-	<!--slick carousel-->
-	<script type="text/javascript"
-		src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
 </html>

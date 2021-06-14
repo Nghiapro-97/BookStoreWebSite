@@ -2,8 +2,8 @@
 
 <section class="section-1" id="title">
 	<div class="container-fluid container1">
-		<div class="container border-bottoms">
-			<nav class="navbar navbar-expand-lg navbar-dark">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-dark border-bottoms">
 				<a href="${pageContext.request.contextPath}/"
 					class="d-flex col navbar-brand"> 
 					<span class="word">Evergreen Book</span>
@@ -21,20 +21,20 @@
 						<ul class="navbar-nav ml-auto">
 							<c:forEach var="category" items="${listCategory}"
 								varStatus="status">
-								<li class="nav-item"><a class="nav-link text-white"
+								<li class="nav-item"><a class="nav-link1 text-decoration-none p-2 text-white"
 									href="view_category?id=${category.categoryId}"><c:out
 											value="${category.name}" /></a></li>
 							</c:forEach>
 						</ul>
 					</div>
 					<div class="col">
-						<div class="d-flex justify-content-end">
+						<div class="d-flex justify-content-end align-items-center py-2">
 							<c:if test="${loggedCustomer == null}">
 								<button type="button" class="btn btn-outline-success text-white" id="btn_login">Sign in</button>
 							</c:if>
 							<c:if test="${loggedCustomer != null}">
 								<div class="dropdown">
-							      <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+							      <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle nav-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
 							        <img src="images/iconuser.png" alt="" width="32" height="32" class="rounded-circle me-2">
 							        <strong >${loggedCustomer.fullname}</strong>
 							      </a>
@@ -68,8 +68,8 @@
 								</a>
 						    </c:if>
 						    -->
-							<a href="view_cart" class="text-white ms-3 pt-1">
-								<i class="fas fa-shopping-cart cart" title="Cart"></i>
+							<a href="view_cart" class="text-white ms-5 nav-link1">
+								<i class="fas fa-shopping-cart cart fs-4" title="Cart"></i>
 							</a>
 						</div>
 					</div>
@@ -79,12 +79,12 @@
 		<!-- Title -->
 		<div class="row">
 			<div class="col-lg-6 side-left">
-				<h1 class="big-hearder text-white scrollanimation animated bounceInLeft" style="animation-delay: 1s">Enjoy the best books
+				<h1 class="big-hearder text-white text-break scrollanimation animated bounceInLeft" style="animation-delay: 1s">Enjoy the best books 
 					<span class="text-primary text-highlight-light">
 						<span
 						     class="txt-rotate"
 						     data-period="2000"
-						     data-rotate='[ "for you.","nerdy.", "simple.", "pretty.", "fun!" ]'>
+						     data-rotate='[ " for you."," nerdy.", " simple.", " pretty.", " fun!" ]'>
 						</span>
 					</span>
 				</h1>
@@ -117,6 +117,15 @@
 		$(".btn-user").click(function() {
 			window.location = 'view_profile';
 		});
+		
+		$(".nav-link1")
+		  .mouseover(function() {
+			  $(this).removeClass("text-white").addClass("text-primary");
+		  })
+		  .mouseout(function() {
+			  $(this).removeClass("text-primary").addClass("text-white");
+		 });
+
 		
 		//$("#card").popover();
 		

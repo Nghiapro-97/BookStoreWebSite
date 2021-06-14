@@ -16,7 +16,7 @@
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
 	<div class="container">
-		<div class="d-grid gap-2 d-md-block pt-6" align="center">
+		<div class="d-grid gap-2 d-md-block mt-5" align="center">
 			<button id="btn-newBook" class="btn btn-lg btn-light shadow p-3 me-2 bg-body rounded rounded-pill">
 				<div class="d-flex justify-content-between mx-1">
 					<i class="fas fa-circle pe-3 align-self-center" style="font-size: 10px; color: #6610f2;"></i>
@@ -66,7 +66,7 @@
 							<th scope="row"><a href="view_order?id=${order.orderId}">${order.orderId}</a></th>
 							<td>${order.customer.fullname}</td>
 							<td>${order.bookCopies}</td>
-							<td><fmt:formatNumber value="${order.total}" type="currency" maxFractionDigits = "3" currencySymbol="$" /></td>
+							<td><fmt:formatNumber value="${order.total}" type="currency" maxFractionDigits = "2" currencySymbol="$" /></td>
 							<td>${order.paymentMethod}</td>
 							<td>${order.status}</td>
 							<td>${order.orderDate}</td>

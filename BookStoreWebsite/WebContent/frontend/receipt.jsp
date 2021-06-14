@@ -31,22 +31,42 @@
 	            <td>
 	              <span>${item.name}</span>
 	            </td>
-	            <td><fmt:formatNumber value="${item.price}" type="currency" /></td>
+	            <td><fmt:formatNumber value="${item.price}" type="currency" maxFractionDigits = "2" currencySymbol="$" /></td>
 	            <td>${item.quantity}</td>
-	            <td><fmt:formatNumber value="${item.price * item.quantity}" type="currency" /></td>
+	            <td><fmt:formatNumber value="${item.price * item.quantity}" type="currency" maxFractionDigits = "2" currencySymbol="$" /></td>
 	          </tr>
           </c:forEach>
         </table>
-        <div class="px-5 my-5 mx-5">
-          <div class="d-flex justify-content-evenly border-bottom mb-2 mt-5 mx-5">
-            <div class="pb-1">SubTotal: <fmt:formatNumber value="${transaction.amount.details.subtotal}" type="currency" /></div>
-            <div>Tax: <fmt:formatNumber value="${transaction.amount.details.tax}" type="currency" /></div>
-            <div>Shipping: <fmt:formatNumber value="${transaction.amount.details.shipping}" type="currency" /></div>
-          </div>
-          <div class="text-center">
-            <strong>Total: <fmt:formatNumber value="${transaction.amount.total}" type="currency" /></strong>
-          </div>
-        </div>
+		<div class="my-5 mx-5">
+			<div class="d-grid gap-2 d-md-flex justify-content-evenly border-bottom mb-2 mt-5 mx-5">
+				<div class="d-flex align-items-center justify-content-between">
+					<div class="me-auto pe-2">Total amount:</div>
+					<div class="">
+						<fmt:formatNumber value="${transaction.amount.details.subtotal}" type="currency" maxFractionDigits="3" currencySymbol="$" />
+					</div>
+				</div>
+				<div class="d-flex justify-content-between align-items-center">
+					<div class="me-auto pe-2">Tax:</div>
+					<div class="">
+						<fmt:formatNumber value="${transaction.amount.details.tax}" type="currency" maxFractionDigits="3" currencySymbol="$" />
+					</div>
+				</div>
+				<div class="d-flex justify-content-between align-items-center">
+					<div class="me-auto pe-2">Shipping:</div>
+					<div class="">
+						<fmt:formatNumber value="${transaction.amount.details.shipping}" type="currency" maxFractionDigits="3" currencySymbol="$" />
+					</div>
+				</div>
+			</div>
+			<div class="d-flex justify-content-center">
+				<div class="pe-2">
+					<strong>TOTAL:</strong>
+				</div>
+				<div class="">
+					<fmt:formatNumber value="${transaction.amount.total}" type="currency" maxFractionDigits="3" currencySymbol="$" />
+				</div>
+			</div>
+		</div>
       </div>
     </div>
 	<script>

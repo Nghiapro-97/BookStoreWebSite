@@ -21,7 +21,7 @@
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
 	<div class="container">
-		<div class="pt-6">
+		<div class="mt-5">
 			<div class="text-center mb-5 border-bottom shadow p-3 mb-5 bg-body rounded">
 				<div class="d-flex justify-content-between mx-1">
 					<i class="fas fa-circle pe-3 align-self-center" style="font-size: 15px; color: #dc3545;"></i>

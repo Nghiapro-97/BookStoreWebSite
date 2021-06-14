@@ -59,7 +59,7 @@
 												<th scope="row">${status.index + 1}</th>
 												<td>${order.orderId}</td>
 												<td>${order.bookCopies}</td>
-												<td><span><fmt:formatNumber value="${order.total}" type="currency" maxFractionDigits = "3" currencySymbol="$" /></span></td>
+												<td><span><fmt:formatNumber value="${order.total}" type="currency" maxFractionDigits = "2" currencySymbol="$" /></span></td>
 												<td><span>${order.orderDate}</span></td>
 												<td><span>${order.status}</span></td>
 												<td><a href="show_order_detail?id=${order.orderId}">Detail</a></td>

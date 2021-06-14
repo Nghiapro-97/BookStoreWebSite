@@ -16,7 +16,7 @@
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
 	<div class="container">
-		<div class="pt-6">
+		<div class="mt-5">
 			<div class="col-sm-8 d-flex align-items-center">
 				<div class="d-grid gap-2 d-md-flex justify-content-md-start">
 					<c:if test="${message != null}">

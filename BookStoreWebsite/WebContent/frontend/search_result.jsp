@@ -53,24 +53,20 @@
 												</a>
 											</div>
 											<div class="col-md-8">
-												<div class="card-body">
-													<h4 class="card-title d-inline-block text-truncate" style="max-width: 300px;">
+												<div class="card-body text-start">
+													<h4 class="card-title text-truncate" style="max-width: 250px;">
 														<a class="text-decoration-none text-reset" href="view_book?id=${book.bookId}">${book.title}</a>
 													</h4>
 													<p class="card-text">
 														<small class="text-muted">by ${book.author}</small>
 													</p>
-													<div class="d-flex justify-content-evenly pb-2">
-														<div>
-															<span class="book-ratting"><jsp:directive.include file="book_rating.jsp" /></span>
-														</div>
-														<div>
-															<a href="#review">${fn:length(book.reviews)} ratings</a>
-														</div>
+													<div class="py-3">
+															<span class="book-ratting me-3"><jsp:directive.include file="book_rating.jsp" /></span>
+															<span><a href="#review">${fn:length(book.reviews)} ratings</a></span> 
 													</div>
-													<div class="pt-4">
+													<div class="pt-3">
 														<h4 class="card-title pricing-card-title">
-															<fmt:formatNumber value="${book.price}" type="currency" maxFractionDigits = "3" currencySymbol="$" />
+															<fmt:formatNumber value="${book.price}" type="currency" maxFractionDigits = "2" currencySymbol="$" />
 														</h4>
 													</div>
 												</div>

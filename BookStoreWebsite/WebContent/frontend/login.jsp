@@ -29,7 +29,8 @@
 	<section class="section-2" id="features">
 		<div class="bg-blue">
 			<div class="container2 py-5">
-				<div class="container d-flex justify-content-center align-items-center py-5">
+				<div class="container py-5">
+					<div class="col-12 col-md-6 mx-auto">
 					<ul class="list-group list-group-flush py-5">
 						<li class="list-group-item">
 						<c:if test="${message != null}">
@@ -75,6 +76,7 @@
 						<li class="list-group-item"><span class="text-center">Don't have an account? <a href="register">Sign up</a>
 						</span></li>
 					</ul>
+				</div>
 				</div>
 			</div>
 		</div>

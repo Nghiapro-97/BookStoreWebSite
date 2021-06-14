@@ -123,7 +123,7 @@
 															</h6>
 															<h6 class="text-muted text-truncate" style="max-width: 150px; font-size: .875rem; font-weight: 500;line-height: 1.2;">by ${item.key.author}</h6>
 															<div>
-															<h6 class="pt-1" style="font-size: smaller; color: #3d8bfd;"><fmt:formatNumber value="${item.key.price}" type="currency" maxFractionDigits = "3" currencySymbol="$" />
+															<h6 class="pt-1" style="font-size: smaller; color: #3d8bfd;"><fmt:formatNumber value="${item.key.price}" type="currency" maxFractionDigits = "2" currencySymbol="$" />
 																x ${item.value}
 															</h6>
 															</div>
@@ -133,19 +133,19 @@
 											</c:forEach>
 											<li class="list-group-item d-flex justify-content-between align-items-center p-3">
 												<span>SubTotal(${cart.totalQuantity} items):</span> 
-												<span class=""><fmt:formatNumber value="${cart.totalAmount}" type="currency" maxFractionDigits = "3" currencySymbol="$" /></span>
+												<span class=""><fmt:formatNumber value="${cart.totalAmount}" type="currency" maxFractionDigits = "2" currencySymbol="$" /></span>
 											</li>
 											<li class="list-group-item d-flex justify-content-between align-items-center p-3">
 												<span>Tax:</span> 
-												<span class=""><fmt:formatNumber value="${cart.tax}" type="currency" maxFractionDigits = "3" currencySymbol="$" /></span>
+												<span class=""><fmt:formatNumber value="${cart.tax}" type="currency" maxFractionDigits = "2" currencySymbol="$" /></span>
 											</li>
 											<li class="list-group-item d-flex justify-content-between align-items-center p-3">
 												<span>Delivery:</span> 
-												<span class=""><fmt:formatNumber value="${shippingFee}" type="currency" maxFractionDigits = "3" currencySymbol="$" /></span>
+												<span class=""><fmt:formatNumber value="${shippingFee}" type="currency" maxFractionDigits = "2" currencySymbol="$" /></span>
 											</li>
 											<li class="list-group-item d-flex justify-content-between align-items-center p-3">
 												<span class="fw-bolder">Total</span> 
-												<span class="fw-bolder"><fmt:formatNumber value="${total}" type="currency" maxFractionDigits = "3" currencySymbol="$" /></span>
+												<span class="fw-bolder"><fmt:formatNumber value="${total}" type="currency" maxFractionDigits = "2" currencySymbol="$" /></span>
 											</li>
 										</ul>
 										<div class="d-flex flex-column px-3">

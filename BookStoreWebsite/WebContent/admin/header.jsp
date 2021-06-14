@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-  <nav class="navbar navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-dark bg-dark">
     <div class="container-fluid d-flex">
       <div class="">
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"

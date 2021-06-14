@@ -16,7 +16,7 @@
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
 	<div class="container">
-		<div class="pt-6">
+		<div class="mt-5">
 			<div class="mb-5 row">
 				<div class="col-sm-8 d-flex align-items-center">
 					<div class="d-grid gap-2 d-md-flex justify-content-md-start">
@@ -79,7 +79,7 @@
 								</td>
 								<td><span>${book.author}</span></td>
 								<td><span>${book.category.name}</span></td>
-								<td><span><fmt:formatNumber value="${book.price}" type="currency" maxFractionDigits = "3" currencySymbol="$" /></span></td>
+								<td><span><fmt:formatNumber value="${book.price}" type="currency" maxFractionDigits = "2" currencySymbol="$" /></span></td>
 								<td><span><fmt:formatDate pattern="MM/dd/yyyy" value='${book.lastUpdateTime}' /></span></td>
 								<td>
 								<a href="edit_book?id=${book.bookId}" class="edit-btn me-2">Edit</a> 

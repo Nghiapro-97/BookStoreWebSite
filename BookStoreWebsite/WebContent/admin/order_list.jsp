@@ -16,7 +16,7 @@
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
 	<div class="container">
-		<div class="pt-6">
+		<div class="mt-6">
 			<div class="col-sm-8 d-flex align-items-center">
 				<div class="d-grid gap-2 d-md-flex justify-content-md-start">
 					<c:if test="${message != null}">
@@ -59,7 +59,7 @@
 								<td>${order.orderId}</td>
 								<td>${order.customer.fullname}</td>
 								<td>${order.bookCopies}</td>
-								<td><fmt:formatNumber value="${order.total}" type="currency" maxFractionDigits = "3" currencySymbol="$" /></td>
+								<td><fmt:formatNumber value="${order.total}" type="currency" maxFractionDigits = "2" currencySymbol="$" /></td>
 								<td>${order.paymentMethod}</td>
 								<td>${order.status}</td>
 								<td>${order.orderDate}</td>

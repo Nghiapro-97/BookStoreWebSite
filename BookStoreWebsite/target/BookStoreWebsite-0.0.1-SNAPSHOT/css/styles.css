@@ -65,9 +65,7 @@ header a:hover, header a span:hover{
     padding-top: 5%;
 }
 
-@media (min-width: 375px) {
-
-
+@media screen and (min-width: 320px){
     .container-fluid .row{
         padding-top: 10%;
     }
@@ -75,7 +73,10 @@ header a:hover, header a span:hover{
     .container-fluid .row form{
         padding: 10% 0;
     }
-
+    
+    body{
+    	font-size: large;
+    }
 }
 
 .btn-toggler{
